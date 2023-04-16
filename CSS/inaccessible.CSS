@@ -1,0 +1,17 @@
+/* no css - used inline styling */
+
+/* poor color contrast */
+p {
+    background-color: #98C2ED;
+    color:#4D8DFF;
+    font-size: 1.0rem;
+}
+
+/* style coupled with header */
+p {
+    font-family: "Gill Sans", sans-serif;
+    font-style: italic;
+}
+
+/* no css - uses browser focus */
+
