@@ -1,0 +1,100 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All About Dogs</title>
+  <meta name="description" content="A simple accessible HTML website.">
+  <meta name="author" content="Nayha Auradkar">
+  <link rel="stylesheet" href="accessible.CSS">
+</head>
+
+<body>
+  <!-- your content here... -->
+  <h1>Welcome to our Website about Dogs!</h1>
+    <figure>
+        <img class="thumb" src="black_lab_puppy.png" alt="Black lab puppy sitting in front of a light pink backdrop and staring at the camera." style="max-width: 30%;"/>
+        <script>
+            const imgThumb = document.querySelector('.thumb');
+      
+            imgThumb.onmouseover = showImg;
+            imgThumb.onmouseout = hideImg;
+      
+            function showImg() {
+              const imgZoom = document.createElement('img');
+              imgZoom.setAttribute('class','zoom');
+              imgZoom.setAttribute('src',imgThumb.getAttribute('src'));
+      
+              let widthOffset = imgThumb.x + imgThumb.width + 10;
+              imgZoom.style.left = widthOffset + 'px';
+              let heightOffset = imgThumb.y;
+              imgZoom.style.top = heightOffset + 'px';
+      
+              document.body.appendChild(imgZoom);
+            }
+      
+            function hideImg() {
+              const imgZoom = document.querySelector('.zoom');
+              document.body.removeChild(imgZoom);
+            }
+      
+          </script>
+      
+        <figcaption>Black lab puppy</figcaption>
+    </figure>
+    <h2>Breeds of Dogs</h2>
+        <ul>
+            <li>Black Lab</li>
+            <li>Golden Retriever</li>
+            <li>Corgi</li>
+            <li>Great Dane</li>
+            <li>Chihuahua</li>
+        </ul>
+    <h2>How to Adopt a Dog</h2>
+        <h3>Seattle Humane Society</h3>
+            <p class="italic sansserif">
+                To learn more about how to adopt a dog from the Seattle Humane Society, click the button below:
+                <div role="button" tabindex="0" onClick="doAction()">
+                    <a href="https://www.seattlehumane.org/">Seattle Humane Society website</a>.
+                </div>
+            </p>
+        <h3>Pet Finder</h3>
+            <p class="italic sansserif">
+                To learn more about how to adopt a dog from Pet Finder, click the button below: 
+                <div role="button" tabindex="0" onClick="doAction()">
+                    <a href="https://www.petfinder.com">Pet Finder website</a>.
+                </div>
+            </p>            
+ 4   <h2>Tell us your Favorite Dog Breed!</h2>
+        <form id="my_form">
+            <label for="breed">Favorite Dog Breed:</label>
+            <input type="breed" id="breed" name="breed">
+            <button id="nextStep" type="submit">Submit</button>
+        </form>
+
+            <div id="thank_you" style="display: none">
+                <p>Thanks for filling out the form!</p>
+                <button onClick="window.location.reload();">Close</button>
+          </div>
+          <script>
+            function closeForm() {
+              document.getElementById("thank_you").reset();
+            }
+            </script>
+              <script>
+                var nextStep = document.querySelector('#nextStep');
+              
+                nextStep.addEventListener('click', function (e) {
+                  e.preventDefault();
+                  // Hide first view
+                  document.getElementById('my_form').style.display = 'none';
+              
+                  // Show thank you message element
+                  document.getElementById('thank_you').style.display = 'block';
+                });
+              </script>  
+    <div class="sr-only">You reached the end of the webpage!</div>
+  <script src="js/scripts.js"></script>
+</body>
+</html>

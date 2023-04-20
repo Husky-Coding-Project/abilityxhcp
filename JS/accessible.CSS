@@ -1,0 +1,72 @@
+/* styling on heading level 2 */
+h2 {
+    text-align: center;
+    font-family: tahoma;
+    color: blue;
+    border: solid  rgb(152, 87, 243);
+}
+
+/* good color contrast */
+p {
+    background-color: #98C2ED;
+    color:#0115A0;
+    font-size: 1.3rem;
+}
+
+
+div {
+    background-color: #cae2fc;
+    color:#0115A0;
+    font-size: 1.3rem;
+    border-style: dashed;
+    border-width: 3px;
+    margin-right: 400px;
+    text-align: center;
+}
+
+button {
+    background-color: #cbe3f6;
+    color:#0115A0;
+    font-size: 1.3rem;
+    border-style: dashed;
+    border-width: 3px;
+    margin-right: 400px;
+    text-align: center;
+}
+
+/* decoupling styles with header */
+.sansserif {
+    font-family: "Gill Sans", sans-serif;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.thumb {
+    width: 300px;
+  }
+
+.zoom {
+    position: absolute;
+}
+
+/* customized focus for different components */
+a:focus {
+    outline: medium dashed #bf40bf;
+}
+
+input:focus, button:focus {
+  outline: 0.1rem solid #bf40bf;
+  border-radius: 2px;
+}
+
+/* hiding from sighted users */
+.sr-only {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
