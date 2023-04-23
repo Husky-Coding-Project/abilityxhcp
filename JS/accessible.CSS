@@ -49,6 +49,8 @@ button {
 
 .zoom {
     position: absolute;
+    width: 40vw;
+    height: auto;
 }
 
 /* customized focus for different components */
