@@ -1,17 +1,17 @@
-/* no css - used inline styling */
+/* add css to style the <h2> heading
+    then remove styles from html */
 
-/* poor color contrast */
+
+/* modify this for better visibility */
 p {
     background-color: #98C2ED;
     color:#4D8DFF;
     font-size: 1.0rem;
 }
 
-/* style coupled with header */
-p {
-    font-family: "Gill Sans", sans-serif;
-    font-style: italic;
-}
+/* add css to customize focus */
 
-/* no css - uses browser focus */
 
+/* add css to hide description of visual information */
+/* at end of inaccessible html page, find "you reached the end of the webpage",
+    uncomment it and try to hide it from sighted user */

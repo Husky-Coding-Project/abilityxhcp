@@ -13,7 +13,7 @@ p {
     font-size: 1.3rem;
 }
 
-/* decoupling styles with header */
+/* quick aside - decoupling styles with tag */
 .sansserif {
     font-family: "Gill Sans", sans-serif;
 }
